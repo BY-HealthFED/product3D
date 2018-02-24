@@ -1,0 +1,9 @@
+[{
+	"name": "维生素C片",
+	"json": "./assets/data/prd.json",
+	"img": "./assets/data/prd40.jpg"
+},{
+	"name": "液体钙软胶囊（200粒）",
+	"json": "./assets/data/prd2.json",
+	"img": "./assets/data/prd56.jpg"
+}]

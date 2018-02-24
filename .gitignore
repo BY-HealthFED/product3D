@@ -1,0 +1,10 @@
+/node_modules
+/npm-debug.log
+/build
+/newprd
+/psd
+.sh
+.DS_Store
+/coverage
+/.idea
+yarn.lock

@@ -1,0 +1,54 @@
+.root {
+	width: 100%;
+}
+
+.title {
+	color: $orange;
+}
+
+.link {
+	color: $blue;
+}
+
+.form {
+	width: 100%;
+	position: absolute;
+	bottom: 2rem;
+	text-align: center;
+
+	select {
+		width: 80%;
+		text-align: center;
+		border: 1px solid #aaa;
+		color: #666;
+		border-radius: $radius-small;
+	}
+}
+
+.modal {
+	padding: 1rem;
+	text-align: center;
+
+	h3 {color: $green; padding-bottom: 1rem}
+}
+.container {
+	position: absolute;
+	left: 0;
+	top: 4rem;
+	right: 0;
+	bottom: 0;
+}
+
+.security {
+	position: absolute;
+	height: 2rem;
+	width: 4rem;
+	font-size: 0.8rem;
+	right: 0;
+	top:6rem;
+	color: #fff;
+	text-align: center;
+	line-height: 2rem;
+	border-radius: .2rem 0 0 .2rem;
+	background-color: $green;
+}

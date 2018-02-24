@@ -1,0 +1,77 @@
+/* stylelint-disable */
+/***
+fixpx
+***/
+@function fixpx($px) {
+  @return ($px/24)+rem;
+}
+
+/***
+color
+基础色彩 $gray $green $red $orange $blue
+按照$-light,$-dark分为2个级别，
+$gray 会衍生更多级别（-dark,-darker,-darkest,-light,-lighter,-lightest）
+***/
+//gray
+$gray: gray;
+$gray-dark: darken($gray, 10%) !default;
+$gray-darker: darken($gray, 20%) !default;
+$gray-darkest: darken($gray, 30%) !default;
+$gray-light: lighten($gray, 30%) !default;
+$gray-lighter: lighten($gray, 35%) !default;
+$gray-lightest: lighten($gray, 45%) !default;
+$test: $gray-light;
+
+$gray-blue: #8699A7;
+
+//green
+$green-light: #62d787;
+$green: #50b154;
+$green-dark: #119717;
+
+//red
+$red-light: #fb5d6c;
+$red: #ff2742;
+$red-dark: #e6344a;
+
+//orange
+$orange-light: #ffc775;
+$orange: #feb244;
+$orange-dark: #ff6004;
+
+//blue
+$blue-light: #6dcff6;
+$blue: #4acdff;
+$blue-dark: #0cb9fb;
+
+
+//== Font-size
+/***
+字体 $font
+按照大小分为6个级别（-big,-bigger,-biggest,-small,-smaller,-smallest）
+//## Font, base on root screen = 640px  1rem = 24px.
+***/
+$font: 1rem; // 24px
+$font-big: 1.16rem; // 28px
+$font-bigger: 1.25rem; // 30px
+$font-biggest: 1.333rem; // 36px
+$font-small: .833rem; // 20px
+$font-smaller: .75rem; // 18px
+$font-smallest: .66rem; // 16px
+
+//==borderradius
+/***
+圆角 $radius
+按照大小分为6个级别（-big,-bigger,-biggest,-small,-smaller,-smallest）
+***/
+$radius: fixpx(19);
+$radius-big: fixpx(35);
+$radius-bigger: fixpx(48);
+$radius-biggest: fixpx(200);
+$radius-small: fixpx(11);
+$radius-smaller: fixpx(8);
+$radius-smallest: fixpx(6);
+
+$shadowalph: 0.05;
+
+

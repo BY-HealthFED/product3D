@@ -1,0 +1,429 @@
+/* stylelint-disable */
+@import "./variables.scss";
+@import "./reset.scss";
+// @import "./icons.scss";
+
+/***
+color
+***/
+//black
+.black{color: black}
+
+//white
+.white{color: white}
+
+//gray
+.gray{color:$gray;}
+.gray-dark{color:$gray-dark;}
+.gray-darker{color:$gray-darker;}
+.gray-darkest{color:$gray-darkest;}
+.gray-light{color:$gray-light;}
+.gray-lighter{color:$gray-lighter;}
+.gray-lightest{color:$gray-lightest;}
+.gray-blue{color:$gray-blue;}
+
+//green
+.green-light{color: $green-light;}
+.green{color: $green;}
+.green-dark{color: $green-dark;}
+
+//red
+.red-light{color: $red-light;}
+.red{color: $red;}
+.red-dark{color: $red-dark;}
+
+//orange
+.orange-light{color: $orange-light;}
+.orange{color: $orange;}
+.orange-dark{color: $orange-dark;}
+
+//blue
+.blue-light{color: $blue-light;}
+.blue{color: $blue;}
+.blue-dark{color: $blue-dark;}
+
+/***
+background-color
+***/
+//black
+.bg-black{background-color: black}
+
+//white
+.bg-white{background-color: white}
+
+//gray
+.bg-gray{background-color:$gray;}
+.bg-gray-dark{background-color:$gray-dark;}
+.bg-gray-darker{background-color:$gray-darker;}
+.bg-gray-darkest{background-color:$gray-darkest;}
+.bg-gray-light{background-color:$gray-light;}
+.bg-gray-lighter{background-color:$gray-lighter;}
+.bg-gray-lightest{background-color:$gray-lightest;}
+.bg-gray-blue{background-color:$gray-blue;}
+
+//green
+.bg-green-light{background-color: $green-light;}
+.bg-green{background-color: $green;}
+.bg-green-dark{background-color: $green-dark;}
+
+//red
+.bg-red-light{background-color: $red-light;}
+.bg-red{background-color: $red;}
+.bg-red-dark{background-color: $red-dark;}
+
+//orange
+.bg-orange-light{background-color: $orange-light;}
+.bg-orange{background-color: $orange;}
+.bg-orange-dark{background-color: $orange-dark;}
+
+//blue
+.bg-blue-light{background-color: $blue-light;}
+.bg-blue{background-color: $blue;}
+.bg-blue-dark{background-color: $blue-dark;}
+
+//== Font-size
+/***
+字体 $font
+按照大小分为6个级别（-big,-bigger,-biggest,-small,-smaller,-smallest）
+//## Font, base on root screen = 640px  1rem = 24px.
+***/
+.font{font-size: $font;}
+.font-big{font-size: $font-big;}
+.font-bigger{font-size: $font-bigger;}
+.font-biggest{font-size: $font-biggest;}
+.font-small{font-size: $font-small;}
+.font-smaller{font-size: $font-smaller;}
+.font-smallest{font-size: $font-smallest;}
+
+//==borderradius
+/***
+圆角 $radius
+按照大小分为6个级别（-big,-bigger,-biggest,-small,-smaller,-smallest）
+***/
+.radius{border-radius: $radius;}
+.radius-big{border-radius: $radius-big;}
+.radius-bigger{border-radius: $radius-bigger;}
+.radius-biggest{border-radius: $radius-biggest;}
+.radius-small{border-radius: $radius-small;}
+.radius-smaller{border-radius: $radius-smaller;}
+.radius-smallest{border-radius: $radius-smallest;}
+
+/***
+浮动方向
+***/
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+
+/***
+清除浮动
+clearfix
+***/
+.clearfix:before,.clearfix:after{
+    content:"";
+    display:table;
+}
+.clearfix:after{clear:both;}
+
+/***
+居中
+layout Center
+***/
+.center{margin: 0 auto;}
+
+/***
+超出隐藏
+Overflowhidden
+***/
+.oh{ overflow: hidden}
+
+/***
+定位
+Position
+***/
+.pr{position: relative}
+.pa{position: absolute}
+.pf{position: fixed}
+
+/***
+对齐方式
+Align
+***/
+.al-l{text-align: left}
+.al-c{text-align: center}
+.al-r{text-align: right}
+
+/***
+显示隐藏
+Show or Hide
+***/
+.show{ display: block !important}
+.hide{ display: none !important }
+
+/***
+是否粗体
+FontWeight
+***/
+.fw-n{font-weight: normal !important;}
+.fw-b{font-weight: bold !important;}
+
+/***
+范围：1% 到 100%百分比宽度：1-10 40－60 90-100 步值为1%， 其余步值为5%
+***/
+@for $i from 1 through 100 {
+    @if ($i < 10) {
+      .w-#{$i} {
+        width: $i*1%;
+      }
+    }
+    @if $i >= 10 and $i <= 40 {
+      @if ($i%5 == 0){
+        @if ($i%10 == 0){
+          .w#{floor($i/10)} {
+            width: $i*1%;
+          }
+        } @else {
+          .w#{floor($i/10)}-#{floor($i%10)} {
+            width: $i*1%;
+          }
+        }
+      }
+    }
+    @if $i > 40 and $i <= 60 {
+      @if ($i%10 == 0){
+        .w#{floor($i/10)} {
+          width: $i*1%;
+        }
+      } @else {
+        .w#{floor($i/10)}-#{floor($i%10)} {
+          width: $i*1%;
+        }
+      }
+    }
+    @if $i > 60 and $i <= 90 {
+      @if ($i%5 == 0){
+        @if ($i%10 == 0){
+          .w#{floor($i/10)} {
+            width: $i*1%;
+          }
+        } @else {
+          .w#{floor($i/10)}-#{floor($i%10)} {
+            width: $i*1%;
+          }
+        }
+      }
+    }
+    @if $i > 90 and $i < 100 {
+      @if ($i%10 == 0){
+        .w#{floor($i/10)} {
+          width: $i*1%;
+        }
+      } @else {
+        .w#{floor($i/10)}-#{floor($i%10)} {
+          width: $i*1%;
+        }
+      }
+    }
+    @if $i == 100 {
+      .ww {
+        width: 100%;
+      }
+    }
+}
+
+.w3-3-3 {width: 33.333%};
+
+/***
+margin
+范围：1 到 10 包含1位小数点值
+***/
+@for $el from 1 through 100 {
+  @if $el < 10 {
+    .mg-#{$el} {
+      margin: $el/10 +rem;
+    }
+    .mgl-#{$el} {
+      margin-left: $el/10 +rem;
+    }
+    .mgr-#{$el} {
+      margin-right: $el/10 +rem;
+    }
+    .mgt-#{$el} {
+      margin-top: $el/10 +rem;
+    }
+    .mgb-#{$el} {
+      margin-bottom: $el/10 +rem;
+    }
+  }
+  @if $el >= 10 and $el <= 100 {
+    @if ($el%10 == 0){
+      .mg#{floor($el/10)} {
+        margin: $el/10 +rem;
+      }
+      .mgl#{floor($el/10)} {
+        margin-left: $el/10 +rem;
+      }
+      .mgr#{floor($el/10)} {
+        margin-right: $el/10 +rem;
+      }
+      .mgt#{floor($el/10)} {
+        margin-top: $el/10 +rem;
+      }
+      .mgb#{floor($el/10)} {
+        margin-bottom: $el/10 +rem;
+      }
+    } @else {
+      .mg#{floor($el/10)}-#{floor($el%10)} {
+        margin: $el/10+rem;
+      }
+      .mgl#{floor($el/10)}-#{floor($el%10)} {
+        margin-left: $el/10+rem;
+      }
+      .mgr#{floor($el/10)}-#{floor($el%10)} {
+        margin-right: $el/10+rem;
+      }
+      .mgt#{floor($el/10)}-#{floor($el%10)} {
+        margin-top: $el/10+rem;
+      }
+      .mgb#{floor($el/10)}-#{floor($el%10)} {
+        margin-bottom: $el/10+rem;
+      }
+    }
+  }
+}
+
+/***
+padding
+范围：1 到 10 包含1位小数点值
+***/
+@for $pd from 1 through 100 {
+  @if $pd < 10 {
+    .pd-#{$pd} {
+      padding: $pd/10 +rem;
+    }
+    .pdl-#{$pd} {
+      padding-left: $pd/10 +rem;
+    }
+    .pdr-#{$pd} {
+      padding-right: $pd/10 +rem;
+    }
+    .pdt-#{$pd} {
+      padding-top: $pd/10 +rem;
+    }
+    .pdb-#{$pd} {
+      padding-bottom: $pd/10 +rem;
+    }
+  }
+  @if $pd >= 10 and $pd <= 100 {
+    @if ($pd%10 == 0){
+      .pd#{floor($pd/10)} {
+        padding: $pd/10 +rem;
+      }
+      .pdl#{floor($pd/10)} {
+        padding-left: $pd/10 +rem;
+      }
+      .pdr#{floor($pd/10)} {
+        padding-right: $pd/10 +rem;
+      }
+      .pdt#{floor($pd/10)} {
+        padding-top: $pd/10 +rem;
+      }
+      .pdb#{floor($pd/10)} {
+        padding-bottom: $pd/10 +rem;
+      }
+    } @else {
+      .pd#{floor($pd/10)}-#{floor($pd%10)} {
+        padding: $pd/10+rem;
+      }
+      .pdl#{floor($pd/10)}-#{floor($pd%10)} {
+        padding-left: $pd/10+rem;
+      }
+      .pdr#{floor($pd/10)}-#{floor($pd%10)} {
+        padding-right: $pd/10+rem;
+      }
+      .pdt#{floor($pd/10)}-#{floor($pd%10)} {
+        padding-top: $pd/10+rem;
+      }
+      .pdb#{floor($pd/10)}-#{floor($pd%10)} {
+        padding-bottom: $pd/10+rem;
+      }
+    }
+  }
+}
+
+/***
+开启或关闭列表样式
+liststyle
+***/
+.nls li{
+  list-style: none !important;
+}
+.ls-o li{
+  list-style-position:outside !important;
+}
+
+.ls-i li{
+  list-style-position:inside !important;
+}
+
+/***
+阴影
+noShadow
+***/
+.shadow {
+  box-shadow:
+  rgba(black, $shadowalph) fixpx(5) 0 fixpx(5),
+  rgba(black, $shadowalph) 0 fixpx(5) fixpx(5),
+  rgba(black, $shadowalph) fixpx(-5) 0 fixpx(5),
+  rgba(black, $shadowalph) 0 fixpx(-5) fixpx(5);
+}
+.shadow-top {
+  box-shadow:
+  rgba(black, $shadowalph) fixpx(5) 0 fixpx(5),
+  rgba(black, $shadowalph) 0 0 0,
+  rgba(black, $shadowalph) fixpx(-5) 0 fixpx(5),
+  rgba(black, $shadowalph) 0 fixpx(-5) fixpx(5);
+}
+.shadow-bottom {
+  box-shadow:
+  rgba(black, $shadowalph) fixpx(5) 0 fixpx(5),
+  rgba(black, $shadowalph) 0 fixpx(5) fixpx(5),
+  rgba(black, $shadowalph) fixpx(-5) 0 fixpx(5),
+  rgba(black, $shadowalph) 0 0 0;
+}
+
+/*字符截取*/
+.txt_cut{text-overflow:ellipsis;overflow:hidden;white-space:nowrap}
+/*换行*/
+.ba{word-break:break-all}
+body {
+		max-width: 640px;
+    margin: 0 auto;
+		position: relative;
+}
+#app {
+    max-width: 640px;
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+    box-shadow: rgba(black, $shadowalph) fixpx(5) 0 fixpx(5),
+  rgba(black, $shadowalph) 0 fixpx(5) fixpx(5),
+  rgba(black, $shadowalph) fixpx(-5) 0 fixpx(5),
+	rgba(black, $shadowalph) 0 0 0;
+}
+
+.btn, .btn:visited {
+	color: #fff;
+	background-color: $green;
+	padding: 1rem;
+	font-size: 1rem;
+	text-align: center;
+	width: 100%;
+}
+
+.btn:focus, .btn:hover {
+	background-color: lighten($green, 10%)
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<% for (var chunk in htmlWebpackPlugin.files.css) { %>
+		<link rel="preload" href="<%= htmlWebpackPlugin.files.css[chunk] %>"  as="style">
+	<% } %>
+	<% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+		<link rel="preload" href="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>" as="script">
+	<% } %>
+	<meta charset="utf-8">
+	<title>3DProducts</title>
+	<!-- 禁止网页转码 -->
+	<meta http-equiv="Cache-Control" content="no-siteapp" />
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="description" content="activitiesCli-by-health">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="apple-mobile-web-app-title" content="preact-boilerplate">
+	<meta name="application-name" content="preact-boilerplate">
+	<meta name="format-detection" content="telephone=no">
+	<!-- wap 皮肤颜色 -->
+	<meta name="theme-color" content="#6bb031">
+	<link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="./assets/icons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="./assets/icons/favicon-16x16.png" sizes="16x16">
+	<!-- 链接到一个指定 Web 应用程序“安装”证书的 JSON 文件 -->
+	<link rel="manifest" href="./manifest.json">
+	<script src="./assets/lib/three.min.js"></script>
+	<script src="./assets/lib/OrbitControls.js"></script>
+	<script src="./assets/lib/tween.min.js"></script>
+	<script>
+		window.onerror = function(errorMessage, scriptURI, lineNumber,columnNumber,errorObj){
+			alert(errorMessage+' '+ scriptURI+' '+ lineNumber+' '+columnNumber+' '+errorObj)
+
+		}
+	</script>
+</head>
+<body></body>
+</html>

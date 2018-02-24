@@ -1,0 +1,185 @@
+@import "./variables.scss";
+/* stylelint-disable */
+html,
+body {
+  font-size: 12px;
+}
+/* reset begin  */
+
+@media screen and (min-width: 436px) and (max-width: 1024px),
+screen and (min-device-width: 436px) and (max-device-width: 1024px) {
+  html,
+  body {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 435px),
+only screen and (max-device-width: 435px) {
+  html,
+  body {
+    font-size: 16.3125px;
+  }
+}
+
+@media only screen and (max-width: 414px),
+only screen and (max-device-width: 414px) {
+  html,
+  body {
+    font-size: 15.525px;
+  }
+}
+
+@media only screen and (max-width: 400px),
+only screen and (max-device-width: 400px) {
+  html,
+  body {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 384px),
+only screen and (max-device-width: 384px) {
+  html,
+  body {
+    font-size: 14.4px;
+  }
+}
+
+@media only screen and (max-width: 375px),
+only screen and (max-device-width: 375px) {
+  html,
+  body {
+    font-size: 14.0625px;
+  }
+}
+
+@media only screen and (max-width: 360px),
+only screen and (max-device-width: 360px) {
+  html,
+  body {
+    font-size: 13.5px;
+  }
+}
+
+@media only screen and (max-width: 320px),
+only screen and (max-device-width: 320px) {
+  html,
+  body {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 240px),
+only screen and (max-device-width: 240px) {
+  html,
+  body {
+    font-size: 9px;
+  }
+}
+
+html {
+  min-height: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  overflow: hidden;
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  font-family: 'arial','sans-serif';
+}
+
+/* 清除内外边距 */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+/* structural elements 结构元素 */
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+/* list elements 列表元素 */
+pre,
+/* text formatting elements 文本格式元素 */
+fieldset,
+lengend,
+button,
+input,
+textarea,
+/* form elements 表单元素 */
+th,
+td {
+  /* table elements 表格元素 */
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+ul,
+ol,
+li {
+  list-style-position: inside;
+}
+
+a {
+  text-decoration: none;
+  color: $gray;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none !important;
+}
+
+input[type="button"], input[type="submit"], input[type="reset"], input[type="text"], input[type="tel"] {
+-webkit-appearance: none;
+}
+
+textarea {  -webkit-appearance: none;}
+
+input:focus,
+button:focus {
+  outline: 0;
+}
+
+.formBox{
+  input[type="text"], input[type="tel"], input[type="number"] {
+    border-radius: .3rem;
+    display: block;
+    width: 100%;
+    height: 2.333rem;
+    padding: 0 1rem;
+		box-sizing: border-box;
+		border: 1px solid $gray-light;
+  }
+	select {
+		height: 2.5rem;
+		background-color: transparent;
+		border: none;
+		border: 1px solid $gray-light;
+	}
+}
+
+.mainlayout {
+	width: 90%;
+	margin: 0 auto;
+}
